@@ -1,0 +1,106 @@
+// 配置阿里云的源
+buildscript {
+    repositories {
+        maven {
+            url "http://maven.aliyun.com/nexus/content/groups/public"
+        }
+    }
+    // 构建时候的一些依赖
+    dependencies {
+    }
+}
+// 编辑打包jar包时需要用到的依赖
+plugins {
+    id 'org.springframework.boot' version '2.1.4.RELEASE'
+    id 'java'
+    // lombok使用打包时需加上这个 否则打包时候会报无法找到 getter 等一些方法
+    id("io.freefair.lombok") version "3.1.4"
+}
+
+// 引入
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.drink'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+        compile.exclude module: 'spring-boot-starter-logging'//排除对默认logging的依赖
+    }
+}
+
+repositories {
+    maven {
+        url "http://maven.aliyun.com/nexus/content/groups/public"
+    }
+}
+
+dependencies {
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.18.6'
+
+    // springboot 中使用mybatis时  不要再次添加org.mybatis 否则 会报找不到mapper方法的错误
+    compile group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.0.1'
+
+    // springboot 的基本依赖
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.1.4.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '2.1.4.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-solr', version: '2.1.4.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.4.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-configuration-processor', version: '2.1.4.RELEASE'
+
+    // spring security 的使用
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-rest', version: '2.1.4.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.1.4.RELEASE'
+
+    // mysql
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.47'
+
+    // 生成接口文档调试等
+    compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+    compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
+
+
+
+    // jwt的使用
+    compile group: 'org.ggframework.security', name: 'spring-security-jwt', version: '1.0.10.RELEASE'
+    compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.1.4.RELEASE'
+    compile group: 'org.springframework', name: 'spring-jdbc', version: '5.1.6.RELEASE'
+    // druid 数据源的配置
+    compile group: 'com.alibaba', name: 'druid-spring-boot-starter', version: '1.1.10'
+
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.8.1'
+//    compile group: 'org.mybatis', name: 'mybatis', version: '3.4.1' 不要加上这行
+
+    compile group: 'com.github.pagehelper', name: 'pagehelper-spring-boot-starter', version: '1.2.10'
+    // 日志配置
+    compile group: 'log4j', name: 'log4j', version: '1.2.17'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-log4j2', version: '2.1.4.RELEASE'
+
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // new add
+    compile group: 'org.noggit', name: 'noggit', version: '0.5'
+
+    // Use JUnit test framework
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.6'
+    // Use JUnit test framework
+    testImplementation 'junit:junit:4.12'
+
+
+}
+
+sourceSets {
+    main {
+        resources {
+            //可以将java目录下的所有非.java资源打包到classes下
+            srcDir 'src/main/java'
+        }
+    }
+}
+
+

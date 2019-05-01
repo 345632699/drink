@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.drink.mapper.AuthMapper">
+    <resultMap id="BaseResultMap" type="com.drink.entity.UserDetail">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="phone" property="phone"/>
+        <result column="telephone" property="telephone"/>
+        <result column="address" property="address"/>
+        <result column="enabled" property="enabled"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="userface" property="userface"/>
+        <result column="remark" property="remark"/>
+    </resultMap>
+    <resultMap id="lazyLoadRoles" type="com.drink.entity.UserDetail" extends="BaseResultMap">
+        <collection property="roles" ofType="com.drink.entity.Role" select="com.drink.mapper.AuthMapper.getRolesByHrId"
+                    column="id"></collection>
+    </resultMap>
+    <select id="getRolesByHrId" resultType="com.drink.entity.Role">
+        SELECT r.* FROM sys_user_role h,sys_role r where h.role_id=r.id AND h.user_id=#{id}
+    </select>
+    <sql id="userColumns">
+        a.id AS "id",
+        a.username AS "username",
+        a.password AS "password",
+        ur.role_id AS "roles.id",
+        r.name AS "roles.name"
+    </sql>
+    <sql id="userJoins">
+        LEFT JOIN sys_user_role ur ON ur.user_id = a.id LEFT JOIN sys_role r ON r.id = ur.role_id
+    </sql>
+    <select id="findByUsername" resultMap="lazyLoadRoles">
+       select * from sys_user WHERE username=#{username};
+    </select>
+
+    <insert id="insert" parameterType="com.drink.entity.UserDetail" useGeneratedKeys="true" keyProperty="id">
+        insert into sys_user (username, password) VALUES (#{username}, #{password});
+    </insert>
+
+    <insert id="insertRole">
+        insert into sys_user_role (user_id, role_id) VALUES (#{userId}, #{roleId});
+    </insert>
+
+    <select id="findRoleById" resultType="com.drink.entity.Role">
+      select id, name, nameZh from sys_role where id = #{roleId}
+    </select>
+
+    <select id="findRoleByUserId" resultType="com.drink.entity.Role">
+        select * from sys_role where id in (SELECT role_id from sys_user_role where user_id = #{userId});
+    </select>
+</mapper>

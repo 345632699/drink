@@ -1,0 +1,1 @@
+[2019-04-25 01:38:01] WARN  org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver 197 logException - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]

@@ -1,0 +1,41 @@
+[2019-04-25 00:09:18] DEBUG 137 statementLog - {conn-10005, pstmt-20000} executed. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join sys_role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+[2019-04-25 00:11:11] DEBUG 137 statementLog - {conn-10005, pstmt-20001} executed. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join sys_role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+[2019-04-25 00:13:53] DEBUG 137 statementLog - {conn-10005, pstmt-20000} executed. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join sys_role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+[2019-04-25 00:14:02] DEBUG 137 statementLog - {conn-10005, pstmt-20001} executed. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join sys_role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+[2019-04-25 00:14:13] DEBUG 137 statementLog - {conn-10005, pstmt-20002} executed. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join sys_role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+[2019-04-25 00:14:43] DEBUG 137 statementLog - {conn-10005, pstmt-20000} executed. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join sys_role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+[2019-04-25 00:15:04] DEBUG 137 statementLog - {conn-10005, pstmt-20001} executed. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join sys_role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+[2019-04-25 00:39:11] DEBUG 137 statementLog - {conn-10005, pstmt-20000} executed. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join sys_role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+[2019-04-25 00:40:02] DEBUG 137 statementLog - {conn-10005, pstmt-20000} executed. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join sys_role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+[2019-04-25 00:41:59] DEBUG 137 statementLog - {conn-10005, pstmt-20000} executed. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join sys_role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+[2019-04-25 00:42:40] DEBUG 137 statementLog - {conn-10005, pstmt-20001} executed. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join sys_role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+[2019-04-25 00:42:45] DEBUG 137 statementLog - {conn-10005, pstmt-20002} executed. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join sys_role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+[2019-04-25 00:44:48] DEBUG 137 statementLog - {conn-10005, pstmt-20003} executed. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join sys_role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+[2019-04-25 00:45:26] DEBUG 137 statementLog - {conn-10005, pstmt-20004} executed. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join sys_role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+[2019-04-25 00:47:15] DEBUG 137 statementLog - {conn-10005, pstmt-20005} executed. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join sys_role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+[2019-04-25 01:38:01] DEBUG 137 statementLog - {conn-10005, pstmt-20000} executed. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join sys_role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+[2019-04-25 01:38:11] DEBUG 137 statementLog - {conn-10005, pstmt-20001} executed. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join sys_role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+[2019-04-25 01:38:11] DEBUG 137 statementLog - {conn-10005, pstmt-20002} executed. select
+     
+    
+    id, menu_id, name, code, sort
+   
+    from permission
+[2019-04-25 01:38:32] DEBUG 137 statementLog - {conn-10005, pstmt-20003} executed. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join sys_role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+[2019-04-25 01:38:32] DEBUG 137 statementLog - {conn-10005, pstmt-20004} executed. select
+     
+    
+    id, menu_id, name, code, sort
+   
+    from permission
+[2019-04-25 01:39:13] DEBUG 137 statementLog - {conn-10005, pstmt-20005} executed. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join sys_role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+[2019-04-25 01:39:36] DEBUG 137 statementLog - {conn-10005, pstmt-20006} executed. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join sys_role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+[2019-04-25 01:39:51] DEBUG 137 statementLog - {conn-10005, pstmt-20007} executed. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join sys_role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+[2019-04-25 01:40:55] DEBUG 137 statementLog - {conn-10005, pstmt-20008} executed. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join sys_role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+[2019-04-25 01:41:00] DEBUG 137 statementLog - {conn-10005, pstmt-20009} executed. select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnamezh from menu m left join menu_role mr on m.`id`=mr.`mid` left join sys_role r on mr.`rid`=r.`id` WHERE m.`enabled`=true order by m.`id` desc
+[2019-04-25 01:41:00] DEBUG 137 statementLog - {conn-10005, pstmt-20010} executed. select
+     
+    
+    id, menu_id, name, code, sort
+   
+    from permission
